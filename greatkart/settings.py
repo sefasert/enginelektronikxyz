@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     "django_htmx",
     #filter
     'django_filters',
+    #django
+    "django",
 ]
 
 MIDDLEWARE = [
