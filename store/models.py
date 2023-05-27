@@ -55,7 +55,7 @@ class Product(models.Model):
     }
 
     DURUM_CHOICE = {
-        ("Sıfır", "0"),
+    #    ("Sıfır", "0"),
         ("2.EL", "2"),
     }
 
@@ -66,7 +66,7 @@ class Product(models.Model):
     EKRAN_CHOICE = {
         ("LED", "led"),
         ("LCD", "lcd"),
-        ("Plazma", "plazma"),
+    #    ("Plazma", "plazma"),
         ("LED-LCD", "led-lcd")
     }
 
