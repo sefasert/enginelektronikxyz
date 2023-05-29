@@ -52,6 +52,7 @@ class Product(models.Model):
         ("FISHER", "Fisher"),
         ("Haier", "Haier"),
         ("WDX", "WDX"),
+        ("Acer", "Acer"),
     }
 
     DURUM_CHOICE = {
