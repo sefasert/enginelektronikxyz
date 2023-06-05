@@ -67,7 +67,7 @@ class Product(models.Model):
     EKRAN_CHOICE = {
         ("LED", "led"),
         ("LCD", "lcd"),
-    #    ("Plazma", "plazma"),
+        ("Plazma", "plazma"),
         ("LED-LCD", "led-lcd")
     }
 
