@@ -44,16 +44,16 @@
   </div>
   </div> <!-- kategoriler buton// -->
 
-  <div class="col-lg  col-md-6 col-sm-12 col"><!-- search -->
+  <div class="col-lg col-md-6 col-sm-12 col"><!-- search -->
     <form action="{% url 'search' %}" class="search" method="GET">
       <div class="input-group">
-          <input type="search" autocomplete="off" class="form-control rounded-lg font-normal text-md bg-zinc-100 border-2 border-zinc-100 hover:border-zinc-200 placeholder-zinc-400 focus:shadow-lg focus:dark:!border-zinc-600 focus:border-zinc-100 ui-autocomplete-input" placeholder="ürün ara" name="keyword" id="anahtar">
-          <div class="relative">
-        <button type="submit" class="btn absolute z-10 rounded-lg px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white" style="margin-left: -7px; margin-top: -0.3px;" aria-label="arama butonu">Ara</button>
+        <input type="search" autocomplete="off" class="form-control p-4 rounded-lg font-normal text-md bg-zinc-100 border-2 border-zinc-100 hover:border-zinc-200 placeholder-zinc-400 focus:shadow-lg focus:dark:!border-zinc-600 focus:border-zinc-100 ui-autocomplete-input" placeholder="ürün ara" name="keyword" id="anahtar">
+        <div>
+        <button type="submit" class="btn absolute z-10 rounded-lg px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white  right-2 bottom-1" aria-label="arama butonu">Ara</button>
         </div>
-      </div>
-    </form>
-  </div> <!-- search// -->
+        </div>
+        </form>
+        </div> <!-- search -->
 
   <div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3"> <!-- login/register -->
         <div class="d-flex justify-content-end mb-3 mb-lg-0">
