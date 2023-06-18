@@ -4,9 +4,6 @@ from .models import Product, Related_Product
 
 from category.models import Category
 
-from carts.models import Cart,CartItem
-from carts.views import _cart_id
-
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 from django.db.models import Q
@@ -63,7 +60,6 @@ def product_detail(request, category_slug, product_slug):
     try:
         single_product = Product.objects.get(category__slug=category_slug, slug=product_slug)
         products = Product.objects.filter(category=single_product.category, is_available=True)
-        in_cart        = CartItem.objects.filter(cart__cart_id=_cart_id(request), product=single_product).exists()
         categories     = get_object_or_404(Category, slug=category_slug)
     except Exception as e:
         raise e
@@ -74,7 +70,6 @@ def product_detail(request, category_slug, product_slug):
 
     context = {
         "single_product" : single_product,
-        "in_cart"        : in_cart,
         "categories"     : categories,
         "related_product": related_product,
         "products": products #benzer ürün
