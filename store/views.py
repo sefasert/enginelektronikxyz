@@ -105,6 +105,10 @@ def home(request, category_slug=None):
     products = None
     setting = Setting.objects.get(pk=1)
 
+#    show_cookie_policy = False
+#    if not request.COOKIES.get('cookie_policy_accepted'):
+#        show_cookie_policy = True
+
     if category_slug !=None:
         categories     = get_object_or_404(Category, slug=category_slug)
         products       = Product.objects.filter(category=categories, is_available=True)
@@ -125,12 +129,17 @@ def home(request, category_slug=None):
         page           = request.GET.get("page")
         paged_products = paginator.get_page(page)
 
+#    if request.method == 'POST' and 'cookie_accept' in request.POST:
+#        response = redirect('home')
+#        response.set_cookie('cookie_policy_accepted', 'true')
+#        return response
 
     context = {
         "products"      : paged_products,
         "categories"    : categories,
         "setting"       : setting,
         "myFilter"      : myFilter,
+#        'show_cookie_policy': show_cookie_policy
     }
 
     if request.htmx:

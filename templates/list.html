@@ -1,4 +1,18 @@
 {% load static %}
+
+<!-- cookie çerez politikası
+{% if show_cookie_policy %}
+<div id="toast-bottom-right" class="z-10 fixed p-3 text-gray-500 bg-white rounded-lg shadow right-5 bottom-5 dark:text-gray-400 dark:bg-gray-800" role="alert">
+    <div class="text-sm">Daha iyi kullanıcı deneyimi için çerezleri kullanıyoruz.
+			<form method="post">
+					{% csrf_token %}
+					<input type="submit" name="cookie_accept" value="Kabul Et" class="mt-1 -ml-1 btn bg-gray-100 hover:bg-gray-200">
+			</form>
+		</div>
+</div>
+	{% endif %}
+-->
+
 <div class="row sagsol" style="margin-top: 8px;"> <!-- ürünler -->
 	{% if products %}
 	{% for product in products %}
