@@ -10,14 +10,11 @@ from django.db.models import Q
 
 from category.models import Setting
 
-
 from django.http import JsonResponse
-
 
 from .filters import ProductFilter
 
 # Create your views here.
-
 
 def store(request, category_slug=None):
     categories = None
