@@ -21,14 +21,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticViewSitemap
+from store.sitemaps import StaticViewSitemap
 
 from django.views.generic.base import TemplateView #import TemplateView
 
 from django.conf.urls import handler404
 
 sitemaps = {
-    'static': StaticViewSitemap,
+    'items': StaticViewSitemap,
     }
 
 

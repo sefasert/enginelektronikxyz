@@ -155,3 +155,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 
 CSRF_TRUSTED_ORIGINS = ["https://testsite-production-62e4.up.railway.app" , "https://www.enginelektronik.xyz", "http://www.enginelektronik.xyz"]
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #http'yi https yapar
+SESSION_COOKIE_SECURE = True  #güvenli çerez
