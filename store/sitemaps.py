@@ -12,8 +12,7 @@ class StaticViewSitemap(Sitemap):
     def location(self, obj):
         urls = []
         absolute_url = obj.get_absolute_url()
-        urls.append(f'http://{absolute_url}')
-        urls.append(f'https://{absolute_url}')
+        urls.append(absolute_url)
         return urls
 
     def lastmod(self, obj):
