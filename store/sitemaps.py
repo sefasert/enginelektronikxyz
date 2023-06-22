@@ -7,7 +7,7 @@ class StaticViewSitemap(Sitemap):
     protocol = "https"
 
     def items(self):
-        return Product.objects.filter(is_available=True)
+        return Product.objects.all()
 
     def location(self, obj: Product) -> str:
         return obj.get_absolute_url()
