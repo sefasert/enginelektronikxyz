@@ -158,4 +158,5 @@ CSRF_TRUSTED_ORIGINS = ["https://testsite-production-62e4.up.railway.app" , "htt
 
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #http'yi https yapar
+SESSION_COOKIE_SAMESITE = 'None'  # Çapraz site isteklerinde gönderilecekse
 SESSION_COOKIE_SECURE = True  #güvenli çerez
