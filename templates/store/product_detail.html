@@ -95,16 +95,13 @@ Satıştan Kaldırıldığı Tarih:
 		            <img src="{{single_product.webp2.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="false"></img>
 								<a href="{{single_product.images2.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
 		        </div>
-						{% else %} <!-- 1'den fazla resim yüklenince eğer 1.resim gözükmezse bu kod devreye girer -->
+						{% else %} <!-- 2.item yoksa 1.itemi getir -->
 						<div class="hidden duration-700 ease-in-out" data-carousel-item>
 												 <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="return false"></img>
 												 <a href="{{single_product.images.url}}" target="_blank" class="-mt-8 -ml-1">
 														 <button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30">
-																 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1">
-																		 <circle cx="11" cy="11" r="8"></circle>
-																		 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-																 </svg> detaylı görmek için tıkla
-														 </button>
+																 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+																 </svg> detaylı görmek için tıkla</button>
 												 </a>
 										 </div>
 										 {% endif %}
@@ -135,11 +132,8 @@ Satıştan Kaldırıldığı Tarih:
 
 		    </div>
 
-
-
-
+					<!-- Slider controls -->
 				{% if single_product.webp2 %}
-		    <!-- Slider controls -->
 		    <button type="button" class="absolute top-0 left-0 -ml-5 -mt-7 z-30 flex items-center justify-center h-80 mt-12 px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
 		        <span class="inline-flex items-center justify-center w-8 h-8 rounded sm:w-10 sm:h-10 bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/60">
 		            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
@@ -152,12 +146,13 @@ Satıştan Kaldırıldığı Tarih:
 		            <span class="sr-only">Next</span>
 		        </span>
 		    </button>
-
+				<!-- resim 5'e özel boşluk verme -->
 					{% if single_product.webp5 %}
 				<div class="z-30 ml-32 mt-7 flex space-x-1 bottom-5">
 					{% else %}
 					<div class="z-30 ml-36 mt-7 flex space-x-3 bottom-5">
 						{% endif %}
+						<!-- thumbnail -->
 								<img src="{{single_product.webp.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt=""  aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0" draggable="false" oncontextmenu="return false"></img>
 								<img src="{{single_product.webp2.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1" draggable="false" oncontextmenu="return false"></img>
 										{% if single_product.webp3 %}
