@@ -65,21 +65,6 @@
     })
 </script>
 
-<!-- userAgent mobil-desktop göster-gösterme -->
-<script>
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-        // Mobil cihazlarda görüntülenecek içerik
-        document.getElementById("mobile-content").style.display = "block";
-        document.getElementById("desktop-content").style.display = "none";
-    } else {
-        // Masaüstü cihazlarda görüntülenecek içerik
-        document.getElementById("mobile-content").style.display = "none";
-        document.getElementById("desktop-content").style.display = "block";
-    }
-</script>
-
 <!-- toogle hamburger menu aç-kapa yapma ve gösterme -->
 <script>
 	const btn = document.querySelector("button.mobile-menu-button");
