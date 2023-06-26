@@ -22,15 +22,18 @@
 				<a href="{{ product.get_absolute_url }}">
 					<img class="rounded" src="{{ product.webp.url }}" alt="{{ product.product_name }}" onerror="this.onerror=null;this.src='{% static 'images/isleniyor.gif' %}'" />
 				</a>
+
 				{% if product.yeni %}
 <span class="badge  badge-danger badge-yeni" style="font-size:11px; margin-left: 243px; margin-top:-3px">&nbsp;{{product.yeni}}&nbsp;</span>
 				{% endif %}
 			</div>
 			<figcaption class="info-wrap">
 				<div class="fix-height">
-					<div style="margin-left: -5px; margin-top: 215px;" class="badge badge-pill badge-light hover:bg-gray-300">
+					<div style="margin-left: -5px; margin-top: 205px;" class="badge badge-pill badge-light hover:bg-gray-300">
 					<a href="{{ product.category.get_url }}" target="_blank" class="font-semibold hover:text-gray-700 break-all">{{ product.category }}</a>
+					<span class="badge badge-light badge-stok" style="font-size:11px; margin-left: 225px; margin-top: -10px">{{product.stock}} Adet</span>
 					</div>
+
 					<a href="{{ product.get_absolute_url }}" target="_blank" class="title mt-4">{{ product.product_name }}</a>
 				</div>
 							</figcaption>
