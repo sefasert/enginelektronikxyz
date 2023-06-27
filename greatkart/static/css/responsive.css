@@ -1,0 +1,32 @@
+/* ================== RESPONSIVE TASARIM =============== */
+@media (max-width: 1200px) {
+  /* tablet devices */
+}
+@media (max-width: 992px) {
+  /* small tablet devices */
+}
+@media all and (max-width: 768px) {
+  /* mobile devices */
+
+  .section-header .header-main .search {
+    margin-bottom: 1rem;
+  }
+
+  .col-md-3 .card {
+    display: none;
+  }
+
+  .info-wrap .fix-height {
+    height: 80px;
+  }
+
+  .sagsol {
+    margin-left: 10px;
+    margin-right: 30px;
+  }
+
+  .badge-stok {
+    margin-left: 320px;
+  }
+
+}
