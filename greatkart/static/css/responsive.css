@@ -8,13 +8,9 @@
 @media all and (max-width: 768px) {
   /* mobile devices */
 
-  .section-header .header-main .search {
-    margin-bottom: 1rem;
-  }
-
   .col-md-3 .card {
-    display: none;
-  }
+  display: none;
+}
 
   .info-wrap .fix-height {
     height: 80px;

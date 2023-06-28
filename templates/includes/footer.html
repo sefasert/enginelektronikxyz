@@ -53,5 +53,19 @@
 	});
 </script>
 
+<!-- search'de placeholder'a tıklayınca yazı gözükmesin başka yere tıklayınca yazı gelsin -->
+<script>
+  const input = document.getElementById('anahtar');
+  const placeholderText = input.placeholder;
+
+  input.addEventListener('focus', function() {
+    this.placeholder = '';
+  });
+
+  input.addEventListener('blur', function() {
+    this.placeholder = placeholderText;
+  });
+</script>
+
 </body>
 </html>

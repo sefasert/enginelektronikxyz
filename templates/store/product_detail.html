@@ -34,15 +34,13 @@
 <article class="gallery-wrap">
 	<div class="img-big-wrap mainImage">
 <center>
-	<img src="{{ single_product.webp.url }}" alt="" style="height:360px;"
-	class="filter grayscale hover:grayscale-0 transition-all duration-300" draggable="false" oncontextmenu="return false"> </img>
+	<img src="{{ single_product.webp.url }}" alt="" class="filter grayscale hover:grayscale-0 transition-all duration-300" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false"> </img>
 </center>
 	</div>
 </article>
 		</aside> <!-- gri resim // -->
 
 <main class="col-md-7 border-left">
-
 <div class="row"> <!-- info -->
 	<div class="btn-group dropright">
 	  <button type="button" class="btn bg-gray-100 rounded ml-3 hover:bg-slate-50 mt-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -86,18 +84,18 @@ Satıştan Kaldırıldığı Tarih:
 		    <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
 		         <!-- Item 1 -->
 		        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-		            <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px;" draggable="false" oncontextmenu="return false"></img>
+		            <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false"></img>
 																<a href="{{single_product.images.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
 		        </div>
 		        <!-- Item 2 -->
 							{% if single_product.webp2 and single_product.images2 %}
 		        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-		            <img src="{{single_product.webp2.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="false"></img>
+		            <img src="{{single_product.webp2.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
 								<a href="{{single_product.images2.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
 		        </div>
 						{% else %} <!-- 2.item yoksa 1.itemi getir -->
 						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-												 <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="return false"></img>
+												 <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false"></img>
 												 <a href="{{single_product.images.url}}" target="_blank" class="-mt-8 -ml-1">
 														 <button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30">
 																 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -109,7 +107,7 @@ Satıştan Kaldırıldığı Tarih:
 						<!-- Item 3 -->
 							{% if single_product.webp3 and single_product.images3 %}
 						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-								<img src="{{single_product.webp3.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="false"></img>
+								<img src="{{single_product.webp3.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
 								<a href="{{single_product.images3.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
 						</div>
 						{% endif %}
@@ -117,7 +115,7 @@ Satıştan Kaldırıldığı Tarih:
 						<!-- Item 4 -->
 							{% if single_product.webp4 and single_product.images4 %}
 						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-								<img src="{{single_product.webp4.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="false"></img>
+								<img src="{{single_product.webp4.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
 								<a href="{{single_product.images4.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
 						</div>
 						{% endif %}
@@ -125,7 +123,7 @@ Satıştan Kaldırıldığı Tarih:
 						<!-- Item 5 -->
 							{% if single_product.webp5 and single_product.images5 %}
 						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-								<img src="{{single_product.webp5.url}}" class="rounded" alt="" style="height:360px;" draggable="false" oncontextmenu="false"></img>
+								<img src="{{single_product.webp5.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
 								<a href="{{single_product.images5.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
 						</div>
 						{% endif %}
@@ -150,7 +148,7 @@ Satıştan Kaldırıldığı Tarih:
 					{% if single_product.webp5 %}
 				<div class="z-30 ml-32 mt-7 flex space-x-1 bottom-5">
 					{% else %}
-					<div class="z-30 ml-36 mt-7 flex space-x-3 bottom-5">
+					<div class="z-30 ml-36 mt-2 flex space-x-3 bottom-5">
 						{% endif %}
 						<!-- thumbnail -->
 								<img src="{{single_product.webp.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt=""  aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0" draggable="false" oncontextmenu="return false"></img>
@@ -228,7 +226,6 @@ Satıştan Kaldırıldığı Tarih:
 </div>
 
 </article> <!-- product-info-aside .// -->
-
 		</main> <!-- col.// -->
 	</div> <!-- row.// -->
 </div> <!-- card.// -->
@@ -248,7 +245,9 @@ Satıştan Kaldırıldığı Tarih:
 																<div class="col-md-2">
 																<figure class="card card-product-grid border-0 rounded-lg">
 																	<div class="img-wrap">
-																		 <a href="{{i.benzerlink}}" target="_blank"><img class="rounded" src="{{ i.benzerresimlink }}" alt="" /></a>
+																		 <a href="{{i.benzerlink}}" target="_blank">
+																			 <img class="rounded" style="height:90%; width:auto;" src="{{ i.benzerresimlink }}" alt="" />
+																		 </a>
 																	</div> <!-- img-wrap.// -->
 																	<figcaption class="info-wrap">
 																		<div class="fix-height">
@@ -263,9 +262,6 @@ Satıştan Kaldırıldığı Tarih:
 																</div>
 																{% endfor %}
                             </div>
-
-
-
             </div>
         </div>
     </div>
