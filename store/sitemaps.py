@@ -1,5 +1,4 @@
 from django.contrib.sitemaps import Sitemap
-
 from .models import Product
 
 class NormalSitemap(Sitemap):
@@ -7,7 +6,7 @@ class NormalSitemap(Sitemap):
     protocol = "https"
 
     def items(self):
-        return Product.objects.all()
+        return Product.objects.filter(is_available=True)
 
     def location(self, obj: Product) -> str:
         return obj.get_absolute_url()
@@ -21,7 +20,7 @@ class MobilSitemap(Sitemap):
     protocol = "https"
 
     def items(self):
-        return Product.objects.all()
+        return Product.objects.filter(is_available=True)
 
     def location(self, obj: Product) -> str:
         return obj.get_absolute_url()
