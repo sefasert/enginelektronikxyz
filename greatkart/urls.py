@@ -21,17 +21,16 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from django.contrib.sitemaps.views import sitemap
-from store.sitemaps import StaticViewSitemap, MobilSitemap
+from store.sitemaps import NormalSitemap, MobilSitemap
 
 from django.views.generic.base import TemplateView #import TemplateView
 
 from django.conf.urls import handler404
 
 sitemaps = {
-    'items': StaticViewSitemap,
+    'normal': StaticViewSitemap,
     'mobil': MobilSitemap,
 }
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),

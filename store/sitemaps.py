@@ -2,7 +2,7 @@ from django.contrib.sitemaps import Sitemap
 
 from .models import Product
 
-class StaticViewSitemap(Sitemap):
+class NormalSitemap(Sitemap):
     changefreq = "weekly"
     protocol = "https"
 
