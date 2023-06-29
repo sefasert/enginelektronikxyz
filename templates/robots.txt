@@ -4,3 +4,4 @@ Disallow: /admin/
 Disallow: /media/
 
 Sitemap: https://www.enginelektronik.xyz/sitemap.xml
+Sitemap: https://www.enginelektronik.xyz/mobil-sitemap.xml
