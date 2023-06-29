@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from django.contrib.sitemaps.views import sitemap
-from store.sitemaps import StaticViewSitemap
+from store.sitemaps import StaticViewSitemap, MobilSitemap
 
 from django.views.generic.base import TemplateView #import TemplateView
 
@@ -29,14 +29,16 @@ from django.conf.urls import handler404
 
 sitemaps = {
     'items': StaticViewSitemap,
-    }
+    'mobil': MobilSitemap,
+}
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("store.urls")),
     path("accounts/", include("accounts.urls")),
-    path("sitemap.xml", sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path("sitemap.xml", sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    path("mobil-sitemap.xml", sitemap, {'sitemaps': sitemaps}, name='mobil-sitemap'),
     path("robots.txt",TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),  #add the robots.txt file
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
