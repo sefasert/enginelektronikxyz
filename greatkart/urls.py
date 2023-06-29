@@ -28,7 +28,7 @@ from django.views.generic.base import TemplateView #import TemplateView
 from django.conf.urls import handler404
 
 sitemaps = {
-    'normal': StaticViewSitemap,
+    'normal': NormalSitemap,
     'mobil': MobilSitemap,
 }
 
