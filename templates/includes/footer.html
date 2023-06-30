@@ -67,5 +67,20 @@
   });
 </script>
 
+<!-- boş değer girilmişse ara butonuna basılmasın -->
+<script>
+  function validateSearch(event) {
+    const keywordInput = document.getElementById('anahtar');
+    const keyword = keywordInput.value.trim();
+
+    if (keyword === '') {
+      event.preventDefault();
+      return false;
+    }
+
+    return true;
+  }
+</script>
+
 </body>
 </html>
