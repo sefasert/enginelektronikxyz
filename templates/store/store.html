@@ -139,24 +139,19 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 
 	<main class="col-md-9">
 
-<header class="mb-4 pb-1 rounded-lg border-white border-8 bg-white">
-		<div class="form-inline ml-3">
-			{% if categories %}
-			<span class="mr-md-auto"> <b> {{ product_count }} </b> ürün bulundu </span>
-{% endif %}
-		</div>
-
-
+<header class="mb-4 pb-1 rounded-lg border-white border-8 bg-white"> <!--header arama sonucu -->
 		<ul class="breadcrumb mt-2 ml-3">
 {% if categories %}
   <li class="active"><a href="{% url 'home'  %}">Anasayfa&nbsp;</a></li>
 	<svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="9 18 15 12 9 6"></polyline></svg>&nbsp;
-	<li class="font-semibold">{{ categories }}</li>
+	<li class="font-semibold">{{ categories }}</li>&nbsp;({{ product_count }}) sonuç&nbsp;bulundu.
 	{% elif product_count > 0 %}
-	<li>arama sonucu: ({{product_count}}) adet ürün bulundu.</li>
+	<li>Arama sonucu: <b>"{{ search_query }}"</b> içeren <b>({{product_count}})</b> adet sonuç bulundu.</li>
+	{% else %}
+	<li>Aradığınız <b>"{{ search_query }}"</b>  sonucu bulunamadı. </li>
 {% endif %}
 </ul>
-</header><!-- sect-heading -->
+</header> <!--/header arama sonucu -->
 
 <nav class="mb-7" aria-label="Page navigation sample"> <!-- paginator -->
 	{% if products.has_other_pages %}
@@ -178,8 +173,9 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 	<div class="col-md-4">
 		<figure class="card card-product-grid rounded border-0">
 			<div class="img-wrap">
-				<a href="{{ product.get_absolute_url }}" target="_blank"> <img src="{{ product.webp.url }}"
-				class="rounded" alt="{{ product.product_name }}"></a>
+				<a href="{{ product.get_absolute_url }}" target="_blank">
+					<img src="{{ product.webp.url }}" class="rounded" style="height:90%; width:auto;" alt="{{ product.product_name }}">
+				</a>
 				{% if product.yeni %}
 <span class="badge  badge-danger badge-yeni" style="font-size:11px; margin-left: 243px; margin-top:-3px">&nbsp;{{product.yeni}}&nbsp;</span>
 				{% endif %}
@@ -200,10 +196,7 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 		</figure>
 	</div>
 	{% endfor %}
-	{% else %}
 </div> <!-- row end.// -->
-<img src="{% static 'images/notfound.png' %}" style="margin-left: 130px; margin-top: -20px;"></img>
-<h2 class="font-semibold text-xl" style="margin-left: 60px;">Aradığınız ürün bulunamadı.</h2>
 </div>
  {% endif %}
 </div>

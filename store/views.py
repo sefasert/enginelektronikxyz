@@ -92,11 +92,13 @@ def search(request):
         else:
             return redirect("store")
 
+    search_query = keyword  # Arama sorgusu değişkeni
 
     context = {
         "products"      : products,
         "product_count" : product_count,
         "myFilter"      : myFilter,
+        "search_query"  : search_query,
     }
     return render(request, "store/store.html", context)
 
