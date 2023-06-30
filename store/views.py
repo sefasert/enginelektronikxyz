@@ -1,3 +1,5 @@
+import json
+
 from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Product, Related_Product
@@ -11,6 +13,8 @@ from django.db.models import Q
 from category.models import Setting
 
 from django.http import JsonResponse
+from django.urls import reverse
+
 
 from .filters import ProductFilter
 
@@ -137,11 +141,26 @@ def home(request, category_slug=None):
 
 def otoyazi(request):
     query_original = request.GET.get("term")
-    queryset = Product.objects.filter(product_name__icontains=query_original, is_available=True)
-    mylist = []
-    mylist += [x.product_name for x in queryset]
+    queryset = Product.objects.filter(product_name__icontains=query_original, is_available=True)[:21]
 
-    return JsonResponse(mylist, safe=False)
+    results = []
+    for product in queryset:
+        category_slug = product.category.slug
+        product_slug = product.slug
+        label = product.product_name
+        value = product.product_name
+        url = reverse('product_detail', args=[category_slug, product_slug])
+
+        result = {
+            'category_slug': category_slug,
+            'product_slug': product_slug,
+            'label': label,
+            'value': value,
+            'url': url
+        }
+        results.append(result)
+
+    return JsonResponse(results, safe=False)
 
 
 def filter_results(request):

@@ -60,7 +60,7 @@
   <div class="col-lg col-md-6 col-sm-12 col"><!-- search -->
     <form action="{% url 'search' %}" class="search" method="GET">
       <div class="input-group">
-        <input type="search" autocomplete="off" class="form-control p-4 rounded-lg font-normal text-md bg-zinc-100 border-2 border-zinc-100 placeholder-zinc-400 focus:shadow-lg focus:dark:!border-zinc-600 focus:border-zinc-100 ui-autocomplete-input" placeholder="ürün ara" name="keyword" id="anahtar">
+        <input type="search" name="keyword" id="anahtar" autocomplete="off" class="form-control p-4 rounded-lg font-normal text-md bg-zinc-100 border-2 border-zinc-100 placeholder-zinc-400 focus:shadow-lg focus:dark:!border-zinc-600 focus:border-zinc-100 ui-autocomplete-input" placeholder="ürün ara">
         <button type="submit" class="btn absolute z-10 rounded-lg px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white  right-2 bottom-1" aria-label="arama butonu">Ara</button>
         </div>
         </form>
