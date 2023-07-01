@@ -104,7 +104,6 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 -
 <input class="bg-zinc-100 rounded ml-1 w-52 placeholder-gray-500" placeholder="yukarı fiyat" type="number" name="price_gt" step="any" id="id_price_gt">
 
-
 		<button class="btn bg-gray-200 hover:bg-zinc-300 mt-1 ml-1" type="submit">Filtreyi Ara</button>
 		</div>
             </form>
@@ -153,7 +152,7 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 </ul>
 </header> <!--/header arama sonucu -->
 
-<nav class="mb-7" aria-label="Page navigation sample"> <!-- paginator -->
+<nav class="mb-7" aria-label="Page navigation sample"> <!-- üst paginator -->
 	{% if products.has_other_pages %}
   <ul class="pagination">
 		{% for i in products.paginator.page_range %}
@@ -165,9 +164,9 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 		{% endfor %}
   </ul>
 		{% endif %}
-</nav> <!-- paginator // -->
+</nav> <!-- üst paginator // -->
 
-<div class="row sagsol" style="margin-top: -10px;">
+<div class="row sagsol" style="margin-top: -10px;"><!--ürün -->
 	{% if products %}
 	{% for product in products %}
 	<div class="col-md-4">
@@ -196,17 +195,9 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 		</figure>
 	</div>
 	{% endfor %}
-</div> <!-- row end.// -->
-</div>
- {% endif %}
-</div>
+</div> <!-- ürün.// -->
 
-
-<!--yukarı --> <a href="#" class="bas" aria-label="yukarı çık" style="width:45px; height:45px; display:none; background-color: #a1d5e3; border-radius: 50px; box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%); position:fixed; padding:8px; z-index:100; right:0; bottom:0; margin-bottom: 10px; margin-right:3px; opacity:0.9;">
-<svg viewBox="0 0 24 24" width="55" height="35" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 -ml-3.5 -mt-1"><polyline points="18 15 12 9 6 15"></polyline></svg>
-</a> <!-- yukarı // -->
-
-<nav class="mt-4" aria-label="Page navigation sample"> <!-- paginator -->
+<nav class="mt-4" aria-label="Page navigation sample"> <!-- alt paginator -->
 	{% if products.has_other_pages %}
   <ul class="pagination">
 		{% for i in products.paginator.page_range %}
@@ -218,8 +209,16 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 		{% endfor %}
   </ul>
 		{% endif %}
-</nav> <!-- paginator // -->
+</nav> <!-- alt paginator // -->
+
+</div>
+ {% endif %}
+</div>
+
+<!--yukarı -->
+<a href="#" class="bas" aria-label="yukarı çık" style="width:45px; height:45px; display:none; background-color: #a1d5e3; border-radius: 50px; box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%); position:fixed; padding:8px; z-index:100; right:0; bottom:0; margin-bottom: 10px; margin-right:3px; opacity:0.9;">
+<svg viewBox="0 0 24 24" width="55" height="35" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 -ml-3.5 -mt-1"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</a> <!-- yukarı // -->
 
 </section>
-<!-- ========================= SECTION CONTENT END// ======== !-->
 {% endblock %}
