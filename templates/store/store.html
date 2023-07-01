@@ -147,7 +147,7 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 	{% elif product_count > 0 %}
 	<li>Arama sonucu: <b>"{{ search_query }}"</b> içeren <b>({{product_count}})</b> adet sonuç bulundu.</li>
 	{% else %}
-	<li>Aradığınız <b>"{{ search_query }}"</b>  sonucu bulunamadı. </li>
+<br>
 {% endif %}
 </ul>
 </header> <!--/header arama sonucu -->
@@ -196,6 +196,8 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 	</div>
 	{% endfor %}
 </div> <!-- ürün.// -->
+{% else %}
+	<li class="-mt-14 ml-5">Aradığınız <b>"{{ search_query }}"</b>  sonucu bulunamadı. </li>
 
 <nav class="mt-4" aria-label="Page navigation sample"> <!-- alt paginator -->
 	{% if products.has_other_pages %}
