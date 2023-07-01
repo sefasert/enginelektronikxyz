@@ -197,7 +197,8 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 	{% endfor %}
 </div> <!-- ürün.// -->
 {% else %}
-	<li class="-mt-14 ml-5">Aradığınız <b>"{{ search_query }}"</b>  sonucu bulunamadı. </li>
+<li class="-mt-14 ml-3">Aradığınız <b>"{{ search_query }}"</b>  sonucu bulunamadı. </li>
+<img src="{% static 'images/notfound.png' %}" style="margin-left: 30px; margin-top: -20px;"></img>
 
 <nav class="mt-4" aria-label="Page navigation sample"> <!-- alt paginator -->
 	{% if products.has_other_pages %}
