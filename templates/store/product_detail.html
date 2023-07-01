@@ -6,7 +6,7 @@
 {% block content %}
 <section class="section-content padding-y bg-zinc-50"> <!-- section1 -->
 <div class="container"> <!-- container -->
-	<ul class="breadcrumb" style="margin-top: -30px; margin-bottom: 5px;"> <!-- breadcrumb -->
+	<ul class="breadcrumb" style="margin-top: -12px; margin-bottom: 5px;"> <!-- breadcrumb -->
 		<li><a class="text-normal" href="{% url 'home' %}">Anasayfa&nbsp;</a></li>
 		<svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="9 18 15 12 9 6"></polyline></svg>&nbsp;
 		<li><a class="text-normal" href="{{ categories.get_url }}">{{ categories.category_name }}&nbsp;</a></li>
@@ -49,7 +49,7 @@
 	</div>
 </div> <!-- info // -->
 
-<article class="content-body" style="margin-left: -20px;">
+<article class="content-body" style="margin-left: -20px; margin-bottom: -15px;">
 <h2 class="flex text-3xl font-bold mb-1">{{ single_product.product_name }}</h2>
 <div class="mb-3">
  <b>Marka:&nbsp;</b>{{ single_product.brand }}<br>
@@ -186,7 +186,7 @@ Satıştan Kaldırıldığı Tarih:
 		</div>
 	</div> <!-- info // -->
 
-	<article class="content-body" style="margin-left: -20px;">
+	<article class="content-body" style="margin-left: -20px; margin-bottom: -15px;">
 	<h2 class="flex text-3xl font-bold mb-2">{{ single_product.product_name }}</h2>
 	<div class="mb-3">
 	 <b>Marka:&nbsp;</b>{{ single_product.brand }}<br>
@@ -235,7 +235,7 @@ Satıştan Kaldırıldığı Tarih:
 </section>  <!-- section1 // -->
 
 {% if related_product %} <!-- related_product -->
-<section class="pt-3 pb-3 -mt-12 bg-zinc-50">
+<section class="pt-3 pb-3 -mt-16 bg-zinc-50">
     <div class="container mx-auto">
         <div class="row">
 					<div class="btn hover:cursor-default bg-sky-100 rounded ml-3">Benzer Ürünler:</div>
