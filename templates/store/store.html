@@ -64,40 +64,42 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 	 <!--   {{ myFilter.form.category }} -->
 	 		<select name="category" id="id_category" class="bg-zinc-100 rounded h-6 ml-1">
 		<option value="" selected="">---------</option>
-	  <option value="1">Vestel-Toshiba-Seg-Anakart</option>
+		<option value="12">Arçelik-Beko-Grundig Anakart</option>
+		<option value="13">Arçelik-Beko-Grundig Powerboard</option>
+	  <option value="1">Vestel-Toshiba Anakart</option>
 		<option value="14">Vestel-Toshiba Powerboard</option>
 	  <option value="2">Samsung Anakart</option>
 		<option value="7">Samsung Powerboard</option>
 		<option value="10">Samsung T-con</option>
-		<option value="33">Samsung Led Driver Board</option>
 		<option value="34">Samsung Inverter Board</option>
+		<option value="33">Samsung Led Driver Board</option>
 		<option value="4">LG Anakart</option>
 		<option value="8">LG Powerboard</option>
 		<option value="11">LG T-con</option>
 		<option value="21">LG Inverter Board</option>
 		<option value="22">LG Led Driver Board</option>
-		<option value="5">Sony Anakart</option>
-		<option value="6">Sony Powerboard</option>
-		<option value="12">Arçelik-Beko-Grundig Anakart</option>
-		<option value="13">Arçelik-Beko-Grundig Powerboard</option>
 		<option value="26">Philips Anakart</option>
 		<option value="27">Philips Powerboard</option>
-	  <option value="3">Sunny-Axen-Woon-Sheen Anakart</option>
-	  <option value="23">Yumatu Anakart</option>
-	  <option value="18">Sanyo-Nordmende Anakart</option>
+		<option value="5">Sony Anakart</option>
+		<option value="6">Sony Powerboard</option>
+	  <option value="3">Sunny-Axen Anakart</option>
+		<option value="31">Sunny-Axen Uydu Alıcı Modül</option>
+		<option value="18">Sanyo-Nordmende Anakart</option>
 		<option value="20">Awox Anakart</option>
+	  <option value="23">Yumatu Anakart</option>
 		<option value="16">Djitsu Anakart</option>
 		<option value="28">Profilo Anakart</option>
-		<option value="24">Premier Anakart</option>
 		<option value="29">Onvo-Saba Anakart</option>
+		<option value="24">Premier Anakart</option>
 	  <option value="9">AUO T-con</option>
-		<option value="31">Uydu Alıcı Modül</option>
 	  <option value="25">Diğer Anakart</option>
 		<option value="19">Diğer Powerboard</option>
 		<option value="17">Diğer T-con Board</option>
 	  <option value="15">Diğer Inverter Board</option>
 		<option value="30">Diğer Led Driver Board</option>
-	  <option value="32">FR-FRC Tv Board</option>
+	  <option value="32">FR-FRC-FRCM Tv Board</option>
+		<option value="35">Tv Speaker (Hoparlör)</option>
+		<option value="36">Monitör Board</option>
 			</select>
 
 <input class="bg-zinc-100 rounded ml-1 w-52 mt-2 placeholder-gray-500" placeholder="aşağı fiyat" type="number" name="price_lt" step="any" id="id_price_lt">
@@ -115,7 +117,7 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 <div class="row">
 
 	<aside class="col-md-3 md:flex lg:flex" style="margin-left: -15px;">
-<div class="flex card w-72 rounded-xl border-8 border-white mt-2" style="height:1460px;">
+<div class="flex card w-80 rounded-xl border-8 border-white mt-2" style="height:1430px;">
 	<article class="filter-group">
 		<header class="card-header">
 			<i class="icon-control fa fa-list"></i>
@@ -124,11 +126,121 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 		<div class="filter-content show" id="collapse_1">
 			<div class="card-body pl-1.5" style="margin-top: -15px; margin-left: -3px">
 				<ul class="list-menu">
+					<!-- kategoriler>
 			{% for category in links %}
  <li class="mt-3">
 	 <a href="{{ category.get_url }}" class="ml-3">{{ category.category_name }}</a>
  </li>
 		 {% endfor %}
+		 <-->
+		 <li class="mt-3">
+			 <a href="/category/arcelik-beko-grundig-anakart/" class="ml-3">Arçelik-Beko-Grundig Anakart</a>
+		 </li>
+		 <li class="mt-3">
+			 <a href="/category/arcelik-beko-grundig-powerboard/" class="ml-3">Arçelik-Beko-Grundig Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/vestel-anakart/" class="ml-3">Vestel-Toshiba Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/vestel-powerboard/" class="ml-3">Vestel-Toshiba Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/samsung-anakart/" class="ml-3">Samsung Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/samsung-powerboard/" class="ml-3">Samsung Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/samsung-t-con/" class="ml-3">Samsung T-con</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/samsung-inverter-board/" class="ml-3">Samsung Inverter Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/samsung-led-driver-board/" class="ml-3">Samsung Led Driver Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/lg-anakart/" class="ml-3">LG Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/lg-powerboard/" class="ml-3">LG Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/lg-t-con/" class="ml-3">LG T-con</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/lg-inverter-board/" class="ml-3">LG Inverter Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/lg-led-driver-board/" class="ml-3">LG Led Driver Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/philips-anakart/" class="ml-3">Philips Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/philips-powerboard/" class="ml-3">Philips Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/sony-anakart/" class="ml-3">Sony Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/sony-powerboard/" class="ml-3">Sony Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/sunny-anakart/" class="ml-3">Sunny-Axen Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/uydu-alici-modul/" class="ml-3">Sunny-Axen Uydu Alıcı Modül</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/sanyo-nordmende-anakart/" class="ml-3">Sanyo-Nordmende Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/awox-anakart/" class="ml-3">Awox Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/yumatu-anakart/" class="ml-3">Yumatu Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/djitsu-anakart/" class="ml-3">Djitsu Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/profilo-anakart/" class="ml-3">Profilo Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/onvo-anakart/" class="ml-3">Onvo-Saba Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/premier-anakart/" class="ml-3">Premier Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/auo-t-con/" class="ml-3">AUO T-con</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/diger-anakart/" class="ml-3">Diğer Anakart</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/diger-powerboard/" class="ml-3">Diğer Powerboard</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/diger-t-con-board/" class="ml-3">Diğer T-con Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/inverter-board/" class="ml-3">Diğer Inverter Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/diger-led-driver-board/" class="ml-3">Diğer Led Driver Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/fr-tv-board/" class="ml-3">FR-FRC-FRCM Tv Board</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/tv-speaker-hoparlor/" class="ml-3">Tv Speaker (Hoparlör)</a>
+		 </li>
+		 <li class="mt-3">
+		 <a href="/category/monitor-kartlari/" class="ml-3">Monitör Board</a>
+		 </li>
 				</ul>
 			</div>
 		</div>
