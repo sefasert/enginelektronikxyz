@@ -82,5 +82,25 @@
   }
 </script>
 
+<!-- select'de seçim seçilmemişse filtreyi ara butonuna basılmasın -->
+<script>
+  function checkSelect(event) {
+    const select1Input = document.getElementById('select1');
+    const select2Input = document.getElementById('select2');
+    const select3Input = document.getElementById('select3');
+
+    const select1Value = select1Input.value;
+    const select2Value = select2Input.value;
+    const select3Value = select3Input.value;
+
+    if (select1Value === '' && select2Value === '' && select3Value === '') {
+      event.preventDefault();
+      return false;
+    }
+
+    return true;
+  }
+</script>
+
 </body>
 </html>

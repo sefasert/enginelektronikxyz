@@ -21,13 +21,12 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
     <div data-popper-arrow></div>
 </div>
 
-
-            <form method="GET" action="{% url 'filter_results' %}">
+        <form method="GET" action="{% url 'filter_results' %}" onsubmit="return checkSelect(event)">
 	<div class="col-lg col-sm col-md col-6 flex-grow-0 mt-1">
 
 		<span class="ml-1">Marka:</span>
 	<!--	 {{ myFilter.form.brand }} -->
-	<select name="brand" id="id_brand" class="bg-zinc-100 rounded h-6 ml-1">
+	<select name="brand" id="select1" class="bg-zinc-100 rounded h-6 ml-1">
 		  <option value="" selected="">---------</option>
 		  <option value="AWOX">Awox</option>
 			<option value="SONY">Sony</option>
@@ -62,7 +61,7 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 
 		<span class="ml-1">Kategori:</span>
 	 <!--   {{ myFilter.form.category }} -->
-	 		<select name="category" id="id_category" class="bg-zinc-100 rounded h-6 ml-1">
+	 		<select name="category" id="select2" class="bg-zinc-100 rounded h-6 ml-1">
 		<option value="" selected="">---------</option>
 		<option value="12">Arçelik-Beko-Grundig Anakart</option>
 		<option value="13">Arçelik-Beko-Grundig Powerboard</option>
@@ -102,15 +101,19 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 		<option value="36">Monitör Board</option>
 			</select>
 
-<input class="bg-zinc-100 rounded ml-1 w-52 mt-2 placeholder-gray-500" placeholder="aşağı fiyat" type="number" name="price_lt" step="any" id="id_price_lt">
--
-<input class="bg-zinc-100 rounded ml-1 w-52 placeholder-gray-500" placeholder="yukarı fiyat" type="number" name="price_gt" step="any" id="id_price_gt">
+			<span class="ml-1">Fiyat:</span>
+	<select name="price_range" id="select3" class="bg-zinc-100 rounded h-6 ml-1">
+			<option value="" selected="">---------</option>
+			<option value="100-300">100 - 300 TL</option>
+			<option value="300-500">300 - 500 TL</option>
+			<option value="500-1000">500 - 1000 TL</option>
+			<option value="1000-2000">1000 TL ve üzeri &nbsp;</option>
+	</select>
 
-		<button class="btn bg-gray-200 hover:bg-zinc-300 mt-1 ml-1" type="submit">Filtreyi Ara</button>
+		<button class="btn bg-gray-200 hover:bg-zinc-300 mt-1 ml-1" type="submit" onclick="return checkSelect(event)">Filtreyi Ara</button>
 		</div>
             </form>
 </div>
-
 <!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y bg-zinc-50" style="padding-top:10px">
 <div class="container">
@@ -311,23 +314,22 @@ Filtreye Göre Ara:<button data-popover-target="popover-right" class="focus:outl
 {% else %}
 <li class="-mt-14 ml-3">Aradığınız <b>"{{ search_query }}"</b>  sonucu bulunamadı. </li>
 <img src="{% static 'images/notfound.png' %}" style="margin-left: 30px; margin-top: -20px;"></img>
-
-<nav class="mt-4" aria-label="Page navigation sample"> <!-- alt paginator -->
-	{% if products.has_other_pages %}
-  <ul class="pagination">
-		{% for i in products.paginator.page_range %}
-		{% if products.number == i %}
-    <li class="page-item active"><span class="page-link">{{ i }}</span></li>
-		{% else %}
-		<li class="page-item"><a class="page-link" href="?page={{i}}">{{ i }}</a></li>
-		{% endif %}
-		{% endfor %}
-  </ul>
-		{% endif %}
-</nav> <!-- alt paginator // -->
-
 </div>
  {% endif %}
+
+ <nav class="mt-4" aria-label="Page navigation sample"> <!-- alt paginator -->
+ 	{% if products.has_other_pages %}
+   <ul class="pagination">
+ 		{% for i in products.paginator.page_range %}
+ 		{% if products.number == i %}
+     <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+ 		{% else %}
+ 		<li class="page-item"><a class="page-link" href="?page={{i}}">{{ i }}</a></li>
+ 		{% endif %}
+ 		{% endfor %}
+   </ul>
+ 		{% endif %}
+ </nav> <!-- alt paginator // -->
 </div>
 
 <!--yukarı -->

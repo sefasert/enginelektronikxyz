@@ -166,28 +166,28 @@ def otoyazi(request):
 
 
 def filter_results(request):
-    products       = Product.objects.filter(is_available=True).order_by("-id")
-    #filter
-    myFilter       = ProductFilter(request.GET, queryset=products)
-    products       = myFilter.qs
+    products = Product.objects.filter(is_available=True).order_by("-id")
+    # myfilter
+    myFilter = ProductFilter(request.GET, queryset=products)
+    products = myFilter.qs
 
-     # Fiyata göre sıralama
+    # Fiyat aralığı filtresi
+    price_range = request.GET.get('price_range')
+    if price_range:
+        if price_range == '100-300':
+            products = products.filter(price__gte=100, price__lte=300).order_by('price')
+        elif price_range == '300-500':
+            products = products.filter(price__gte=300, price__lte=500).order_by('price')
+        elif price_range == '500-1000':
+            products = products.filter(price__gte=500, price__lte=1000).order_by('price')
+        elif price_range == '1000-2000':
+            products = products.filter(price__gte=1000, price__lte=2000).order_by('price')
+
+    #fiyatı küçükten büyüğe doğru sıralama
     products = products.order_by('price')
 
-    paginator      = Paginator(products, 33)
-    page           = request.GET.get("page")
-    try:
-        paged_products = paginator.page(page)
-    except PageNotAnInteger:
-        paged_products = paginator.page(1)
-    except EmptyPage:
-        paged_products = paginator.page(paginator.num_pages)
-
-    page_obj=paginator.get_page(page)
-
     context = {
-        'products':products,
-        'myFilter':myFilter,
-        'page_obj':page_obj
+        'products': products,
+        'myFilter': myFilter,
     }
     return render(request, 'store/store.html', context)
