@@ -53,6 +53,8 @@ class Product(models.Model):
         ("Haier", "Haier"),
         ("WDX", "WDX"),
         ("Acer", "Acer"),
+        ("Casper", "Casper"),
+        ("Exper", "Exper"),
     }
 
     DURUM_CHOICE = {
@@ -87,7 +89,7 @@ class Product(models.Model):
     images4       = models.ImageField(upload_to= "photos4/products", blank=True, null=True)
     webp4         = models.ImageField(upload_to= "webp4/products", blank=True, null=True)
     images5       = models.ImageField(upload_to= "photos5/products", blank=True, null=True)
-    webp5         = models.ImageField(upload_to= "webp5/products", blank=True, null=True)    
+    webp5         = models.ImageField(upload_to= "webp5/products", blank=True, null=True)
     stock         = models.IntegerField()
     ekran         = models.CharField(max_length=10, choices=EKRAN_CHOICE, blank=True)
     tags          = models.CharField(max_length=1000, blank=True)
