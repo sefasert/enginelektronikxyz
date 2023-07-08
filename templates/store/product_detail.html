@@ -76,99 +76,102 @@ Satıştan Kaldırıldığı Tarih:
 	<div class="card mt-1 border-8 border-white rounded-lg">
 		<div class="row no-gutters">
 			<aside class="col-md-5"> <!-- gallery -->
-	<article class="gallery-wrap">
-		<div class="img-big-wrap mainImage">
-	<center>
-		<div id="default-carousel" class="relative" data-carousel="static">
-		    <!-- Carousel wrapper -->
-		    <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
-		         <!-- Item 1 -->
-		        <div class="duration-700 ease-in-out" data-carousel-item>
-		            <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false"></img>
-																<a href="{{single_product.images.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
-		        </div>
-		        <!-- Item 2 -->
+				<center>
+					<div class="relative rounded-lg">
+					<div id="carouselExampleIndicators" class="carousel slide">
+					<div class="carousel-inner">
+					    <div class="carousel-item active">
+								<a href="{{single_product.images.url}}" target="_blank">
+								<img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
+								</img>
+								</a>
+					    </div>
 							{% if single_product.webp2 and single_product.images2 %}
-		        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-		            <img src="{{single_product.webp2.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
-								<a href="{{single_product.images2.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
-		        </div>
-						{% else %} <!-- 2.item yoksa 1.itemi getir -->
-						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-												 <img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false"></img>
-												 <a href="{{single_product.images.url}}" target="_blank" class="-mt-8 -ml-1">
-														 <button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30">
-																 <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-																 </svg> detaylı görmek için tıkla</button>
-												 </a>
-										 </div>
-										 {% endif %}
-
-						<!-- Item 3 -->
+							<div class="carousel-item">
+								<a href="{{single_product.images2.url}}" target="_blank">
+								<img src="{{single_product.webp2.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
+								</img>
+								</a>
+							</div>
+							{% endif %}
 							{% if single_product.webp3 and single_product.images3 %}
-						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-								<img src="{{single_product.webp3.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
-								<a href="{{single_product.images3.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
-						</div>
-						{% endif %}
-
-						<!-- Item 4 -->
+							<div class="carousel-item">
+								<a href="{{single_product.images3.url}}" target="_blank">
+								<img src="{{single_product.webp3.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
+								</img>
+								</a>
+							</div>
+							{% endif %}
 							{% if single_product.webp4 and single_product.images4 %}
-						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-								<img src="{{single_product.webp4.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
-								<a href="{{single_product.images4.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
-						</div>
-						{% endif %}
-
-						<!-- Item 5 -->
+							<div class="carousel-item">
+								<a href="{{single_product.images4.url}}" target="_blank">
+								<img src="{{single_product.webp4.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
+								</img>
+								</a>
+							</div>
+							{% endif %}
 							{% if single_product.webp5 and single_product.images5 %}
-						<div class="hidden duration-700 ease-in-out" data-carousel-item>
-								<img src="{{single_product.webp5.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="false"></img>
-								<a href="{{single_product.images5.url}}" target="_blank" class="-mt-8 -ml-1"><button type="button" class="px-1 py-1 text-sm ml-3 mt-1 text-white/70 btn bg-black/70 hover:bg-white/30"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 inline -mt-1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> detaylı görmek için tıkla</button></a>
-						</div>
-						{% endif %}
+							<div class="carousel-item">
+								<a href="{{single_product.images5.url}}" target="_blank">
+								<img src="{{single_product.webp5.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
+								</img>
+								</a>
+							</div>
+							{% endif %}
 
-		    </div>
-
-					<!-- Slider controls -->
-				{% if single_product.webp2 %}
-		    <button type="button" class="absolute top-0 left-0 -ml-5 -mt-7 z-30 flex items-center justify-center h-80 mt-12 px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-		        <span class="inline-flex items-center justify-center w-8 h-8 rounded sm:w-10 sm:h-10 bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/60">
-		            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-		            <span class="sr-only">Previous</span>
-		        </span>
-		    </button>
-		    <button type="button" class="absolute top-0 right-0 -mr-5 -mt-7 z-30 flex items-center justify-center h-80 mt-12 px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-		        <span class="inline-flex items-center justify-center w-8 h-8 rounded sm:w-10 sm:h-10 bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/60">
-		            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-		            <span class="sr-only">Next</span>
-		        </span>
-		    </button>
-				<!-- resim 5'e özel boşluk verme -->
-					{% if single_product.webp5 %}
-				<div class="z-30 ml-32 mt-2 flex space-x-1 bottom-5">
-					{% else %}
-					<div class="z-30 ml-36 mt-2 flex space-x-3 bottom-5">
-						{% endif %}
-						<!-- thumbnail -->
-								<img src="{{single_product.webp.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt=""  aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0" draggable="false" oncontextmenu="return false"></img>
-								<img src="{{single_product.webp2.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1" draggable="false" oncontextmenu="return false"></img>
-										{% if single_product.webp3 %}
-								<img src="{{single_product.webp3.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2" draggable="false" oncontextmenu="return false"></img>
+			{% if single_product.webp2 %}
+							<ol class="carousel-indicators">
+								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active -mt-12"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="1" class="-mt-12"></li>
+								{% endif %}
+								{% if single_product.webp3 %}
+								<li data-target="#carouselExampleIndicators" data-slide-to="2" class="-mt-12"></li>
 								{% endif %}
 								{% if single_product.webp4 %}
-						<img src="{{single_product.webp4.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3" draggable="false" oncontextmenu="return false"></img>
+								<li data-target="#carouselExampleIndicators" data-slide-to="3" class="-mt-12"></li>
+								{% endif %}
+								{% if single_product.webp5 %}
+								<li data-target="#carouselExampleIndicators" data-slide-to="4" class="-mt-12"></li>
+								{% endif %}
+							</ol>
+
+				 </div>
+				 {% if single_product.webp2 %}
+					  <a class="carousel-control-prev absolute top-0 right-0 z-30 flex items-center justify-center h-60 mt-20 px-4 cursor-pointer group focus:outline-none" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<span class="-ml-6 inline-flex items-center justify-center w-8 h-8 rounded sm:w-10 sm:h-10 bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/60">
+									<svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+									<span class="sr-only">Previous</span>
+							</span>
+					  </a>
+					  <a class="carousel-control-next absolute top-0 right-0 z-30 flex items-center justify-center h-60 mt-20 px-4 cursor-pointer group focus:outline-none" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<span class="-mr-6 inline-flex items-center justify-center w-8 h-8 rounded sm:w-10 sm:h-10 bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/60">
+									<svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+									<span class="sr-only">Next</span>
+							</span>
+					  </a>
 						{% endif %}
-						<br><br>
+					</div>
+
+					<div class="z-30 ml-28 mt-1 flex space-x-3 bottom-5">
+						<!-- thumbnail -->
+						{% if single_product.webp2 %}
+								<img src="{{single_product.webp.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-28 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt=""  aria-current="false" aria-label="Slide 1" data-target="#carouselExampleIndicators" data-slide-to="0" draggable="false" oncontextmenu="return false"></img>
+								<img src="{{single_product.webp2.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-28 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 2" data-target="#carouselExampleIndicators" data-slide-to="1" data-carousel-slide-to="1" draggable="false" oncontextmenu="return false"></img>
+								{% endif %}
+										{% if single_product.webp3 %}
+								<img src="{{single_product.webp3.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 3" data-target="#carouselExampleIndicators" data-slide-to="2" draggable="false" oncontextmenu="return false"></img>
+								{% endif %}
+								{% if single_product.webp4 %}
+						<img src="{{single_product.webp4.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 4" data-target="#carouselExampleIndicators" data-slide-to="3" draggable="false" oncontextmenu="return false"></img>
+						{% endif %}
+
 						{% if single_product.webp5 %}
-				<img src="{{single_product.webp5.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4" draggable="false" oncontextmenu="return false"></img>
+				<img src="{{single_product.webp5.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 5" data-target="#carouselExampleIndicators" data-slide-to="4" draggable="false" oncontextmenu="return false"></img>
 				{% endif %}
-		    </div>
-				{% endif %}
-		</div>
-	</center>
-		</div>
-	</article>
+				</div>
+
+			</div>
+				</center>
 			</aside> <!-- gallery // -->
 
 			<main class="col-md-7 border-left">  <!-- main -->
