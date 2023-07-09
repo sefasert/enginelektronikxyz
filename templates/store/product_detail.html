@@ -81,14 +81,14 @@ Satıştan Kaldırıldığı Tarih:
 					<div id="carouselExampleIndicators" class="carousel slide">
 					<div class="carousel-inner">
 					    <div class="carousel-item active">
-								<a href="{{single_product.images.url}}" target="_blank">
+								<a href="{{single_product.images.url}}" target="_blank" aria-label="">
 								<img src="{{single_product.webp.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
 								</img>
 								</a>
 					    </div>
 							{% if single_product.webp2 and single_product.images2 %}
 							<div class="carousel-item">
-								<a href="{{single_product.images2.url}}" target="_blank">
+								<a href="{{single_product.images2.url}}" target="_blank" aria-label="">
 								<img src="{{single_product.webp2.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
 								</img>
 								</a>
@@ -96,7 +96,7 @@ Satıştan Kaldırıldığı Tarih:
 							{% endif %}
 							{% if single_product.webp3 and single_product.images3 %}
 							<div class="carousel-item">
-								<a href="{{single_product.images3.url}}" target="_blank">
+								<a href="{{single_product.images3.url}}" target="_blank" aria-label="">
 								<img src="{{single_product.webp3.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
 								</img>
 								</a>
@@ -104,7 +104,7 @@ Satıştan Kaldırıldığı Tarih:
 							{% endif %}
 							{% if single_product.webp4 and single_product.images4 %}
 							<div class="carousel-item">
-								<a href="{{single_product.images4.url}}" target="_blank">
+								<a href="{{single_product.images4.url}}" target="_blank" aria-label="">
 								<img src="{{single_product.webp4.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
 								</img>
 								</a>
@@ -112,7 +112,7 @@ Satıştan Kaldırıldığı Tarih:
 							{% endif %}
 							{% if single_product.webp5 and single_product.images5 %}
 							<div class="carousel-item">
-								<a href="{{single_product.images5.url}}" target="_blank">
+								<a href="{{single_product.images5.url}}" target="_blank" aria-label="">
 								<img src="{{single_product.webp5.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
 								</img>
 								</a>
@@ -248,7 +248,7 @@ Satıştan Kaldırıldığı Tarih:
 																<div class="col-md-2">
 																<figure class="card card-product-grid border-0 rounded-lg">
 																	<div class="img-wrap">
-																		 <a href="{{i.benzerlink}}" target="_blank">
+																		 <a href="{{i.benzerlink}}" target="_blank" aria-label="">
 																			 <img class="rounded" style="height:90%; width:auto;" src="{{ i.benzerresimlink }}" alt="" />
 																		 </a>
 																	</div> <!-- img-wrap.// -->
