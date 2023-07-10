@@ -12,13 +12,13 @@
 <meta name="google-site-verification" content="6L2RD__lUdlr8X2lTzgKzJfS6nDDCbCe6DoskQGwL1c" />
 <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
 <link rel="canonical" href="{{ CANONICAL_PATH }}" />
+<!-- bootstrap css -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
 <!-- jQuery js -->
 <link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" type="text/css" />
 <script src="{% static 'js/jquery-3.6.0.min.js' %}" type="text/javascript" async></script>
 <!-- Bootstrap4 js-->
 <script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript" async></script>
-<!-- bootstrap css -->
-<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
 <!-- tailwind-flowbite -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js" defer></script>
@@ -34,12 +34,13 @@
   {% block content %}
     {% endblock %}
 {% include "includes/footer.html" %}
+
 <!-- auto complete -->
 <script src="{% static 'js/jquery-ui.min.js' %}" defer></script>
 <script>
 $(function() {
   $("#anahtar").autocomplete({
-    delay: 0,
+    delay: 300,
     minLength: 2,
     source: "{% url 'otoyazi'  %}",
     select: function(event, ui) {
@@ -51,5 +52,3 @@ $(function() {
   });
 });
 </script>
-<!-- link paylaş -->
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6384c64804255c001315133b&product=inline-share-buttons" async></script>
