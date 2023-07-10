@@ -16,9 +16,9 @@
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
 <!-- jQuery js -->
 <link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" type="text/css" />
-<script src="{% static 'js/jquery-3.6.0.min.js' %}" type="text/javascript" async></script>
+<script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
 <!-- Bootstrap4 js-->
-<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript" async></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
 <!-- tailwind-flowbite -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js" defer></script>
@@ -40,7 +40,7 @@
 <script>
 $(function() {
   $("#anahtar").autocomplete({
-    delay: 300,
+    delay: 0,
     minLength: 2,
     source: "{% url 'otoyazi'  %}",
     select: function(event, ui) {
