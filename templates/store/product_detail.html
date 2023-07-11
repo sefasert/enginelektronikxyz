@@ -118,6 +118,14 @@ Satıştan Kaldırıldığı Tarih:
 								</a>
 							</div>
 							{% endif %}
+							{% if single_product.webp6 and single_product.images6 %}
+							<div class="carousel-item">
+								<a href="{{single_product.images6.url}}" target="_blank" aria-label="">
+								<img src="{{single_product.webp6.url}}" class="rounded" alt="" style="height:357px; width:auto;" draggable="false" oncontextmenu="return false">
+								</img>
+								</a>
+							</div>
+							{% endif %}
 
 			{% if single_product.webp2 %}
 							<ol class="carousel-indicators">
@@ -132,6 +140,9 @@ Satıştan Kaldırıldığı Tarih:
 								{% endif %}
 								{% if single_product.webp5 %}
 								<li data-target="#carouselExampleIndicators" data-slide-to="4" class="-mt-12"></li>
+								{% endif %}
+								{% if single_product.webp6 %}
+								<li data-target="#carouselExampleIndicators" data-slide-to="5" class="-mt-12"></li>
 								{% endif %}
 							</ol>
 
@@ -168,6 +179,10 @@ Satıştan Kaldırıldığı Tarih:
 						{% if single_product.webp5 %}
 				<img src="{{single_product.webp5.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 5" data-target="#carouselExampleIndicators" data-slide-to="4" draggable="false" oncontextmenu="return false"></img>
 				{% endif %}
+
+				{% if single_product.webp6 %}
+		<img src="{{single_product.webp6.url}}" style="height:70px; width:70px;" class="inline rounded-lg -ml-32 hover:cursor-pointer hover:outline hover:outline-2 mb-2" alt="" aria-current="false" aria-label="Slide 5" data-target="#carouselExampleIndicators" data-slide-to="5" draggable="false" oncontextmenu="return false"></img>
+		{% endif %}
 				</div>
 
 			</div>

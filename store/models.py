@@ -90,6 +90,8 @@ class Product(models.Model):
     webp4         = models.ImageField(upload_to= "webp4/products", blank=True, null=True)
     images5       = models.ImageField(upload_to= "photos5/products", blank=True, null=True)
     webp5         = models.ImageField(upload_to= "webp5/products", blank=True, null=True)
+    images6       = models.ImageField(upload_to= "photos6/products", blank=True, null=True)
+    webp6         = models.ImageField(upload_to= "webp6/products", blank=True, null=True)
     stock         = models.IntegerField()
     ekran         = models.CharField(max_length=10, choices=EKRAN_CHOICE, blank=True)
     tags          = models.CharField(max_length=1000, blank=True)
